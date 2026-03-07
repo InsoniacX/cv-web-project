@@ -4,7 +4,7 @@ const container = orb.parentElement;
 function moveToRandom() {
   const containerW = container.offsetWidth;
   const containerH = container.offsetHeight;
-  const orbSize = 500;
+  const orbSize = 700;
 
   const randomLeft = Math.random() * (containerW - orbSize * 0.5) - orbSize * 0.25;
   const randomTop  = Math.random() * (containerH - orbSize * 0.5) - orbSize * 0.25;
