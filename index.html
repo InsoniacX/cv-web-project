@@ -7,10 +7,21 @@
     <!-- Tailwind CSS -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="css/styles.css" />
+    <!-- FlatIcon -->
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/3.0.0/uicons-bold-rounded/css/uicons-bold-rounded.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/3.0.0/uicons-brands/css/uicons-brands.css"
+    />
   </head>
   <body>
-    <nav class="bg-black sticky top-0 z-50 shadow-md jetbrains-mono">
-      <div class="max-w-6xl mx-auto px-6">
+    <nav
+      class="sticky bg-black md:fixed top-0 z-50 shadow-md jetbrains-mono md:bg-transparent w-full relative"
+    >
+      <div class="w-full mx-auto px-6 relative">
         <div class="flex items-center justify-between h-16">
           <a
             href="#"
@@ -18,7 +29,7 @@
             >InscX // Junior Full-Stack</a
           >
 
-          <div class="hidden md:flex items-center gap-8">
+          <div class="hidden md:flex justify-evenly gap-8 ml-auto">
             <a
               href="/"
               class="text-gray-100 hover:text-white text-sm font-medium uppercase tracking-widest transition-colors duration-200"
@@ -47,43 +58,15 @@
             onclick="toggleMenu()"
             aria-label="Toggle menu"
           >
-            <svg
-              id="icon-open"
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              fill="none"
-              stroke="white"
-              stroke-width="2.5"
-              stroke-linecap="round"
-              viewBox="0 0 24 24"
-            >
-              <line x1="3" y1="6" x2="21" y2="6" />
-              <line x1="3" y1="12" x2="21" y2="12" />
-              <line x1="3" y1="18" x2="21" y2="18" />
-            </svg>
-            <svg
-              id="icon-close"
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              fill="none"
-              stroke="white"
-              stroke-width="2.5"
-              stroke-linecap="round"
-              viewBox="0 0 24 24"
-              class="hidden"
-            >
-              <line x1="6" y1="6" x2="18" y2="18" />
-              <line x1="18" y1="6" x2="6" y2="18" />
-            </svg>
+            <i class="fi fi-br-menu-burger text-white" id="icon-open"></i>
+            <i class="fi fi-br-cross text-white hidden" id="icon-close"></i>
           </button>
         </div>
       </div>
 
       <div
         id="mobile-menu"
-        class="mobile-menu md:hidden bg-gray-black border-t border-white/10"
+        class="mobile-menu md:hidden absolute top-16 left-0 w-full bg-black border-t border-white/10 z-50"
       >
         <a
           href="/"
@@ -129,7 +112,7 @@
             </div>
             <div class="flex text-white jetbrains-mono gap-6 mt-2">
               <a
-                href=""
+                href="#projects"
                 class="px-4 py-2 bg-[#c9a76f] border-2 text-black border-black hover:bg-transparent hover:text-[#c9a76f] hover:border-[#c9a76f] transition-colors duration-200"
                 >My Works</a
               >
@@ -158,7 +141,7 @@
 
               <div class="w-full h-full overflow-hidden">
                 <img
-                  src="https://preview.redd.it/why-this-armor-of-all-v0-b4sytx095xnc1.jpg?width=1100&format=pjpg&auto=webp&s=9de65cd3200a185630442eb4620ef66d6e98f526"
+                  src="assets/Hitler_portrait_crop_(cropped)(2).jpg"
                   alt="Profile"
                   class="w-full h-full object-cover object-top z-10"
                 />
@@ -276,7 +259,6 @@
               </div>
             </div>
 
-            <!-- Right: Education -->
             <div>
               <div class="flex items-center gap-3 mb-8">
                 <span class="w-10 h-px bg-[#c9a76f]"></span>
@@ -287,7 +269,6 @@
               </div>
 
               <div class="flex flex-col gap-10">
-                <!-- Education item 1 -->
                 <div class="border-l-2 border-[#c9a76f] pl-5 relative">
                   <span
                     class="absolute -left-[5px] top-[6px] w-2 h-2 rounded-full bg-[#c9a76f]"
@@ -309,7 +290,6 @@
                   </p>
                 </div>
 
-                <!-- Education item 2 -->
                 <div class="border-l-2 border-[#c9a76f] pl-5 relative">
                   <span
                     class="absolute -left-[5px] top-[6px] w-2 h-2 rounded-full bg-[#c9a76f]"
@@ -345,7 +325,7 @@
 
           <!-- Carousel -->
           <div class="carousel-wrapper overflow-hidden">
-            <div class="carousel-track flex gap-6">
+            <div class="carousel-track flex gap-6" id="carouselTrack">
               <!-- First set -->
               <div
                 class="flex flex-col items-center justify-center gap-2 w-[90px] h-[90px] flex-shrink-0 border border-white/10 bg-white/[0.03] hover:border-[#c9a76f]/40 hover:bg-[#c9a76f]/5 transition-all duration-200 cursor-default"
@@ -410,6 +390,19 @@
                 <span
                   class="jetbrains-mono text-[10px] text-gray-500 uppercase tracking-wider"
                   >TypeScript</span
+                >
+              </div>
+              <div
+                class="flex flex-col items-center justify-center gap-2 w-[90px] h-[90px] flex-shrink-0 border border-white/10 bg-white/[0.03] hover:border-[#c9a76f]/40 hover:bg-[#c9a76f]/5 transition-all duration-200 cursor-default"
+              >
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg"
+                  class="w-8 h-8"
+                  alt="Go"
+                />
+                <span
+                  class="jetbrains-mono text-[10px] text-gray-500 uppercase tracking-wider"
+                  >Go</span
                 >
               </div>
               <div
@@ -546,20 +539,6 @@
                 class="flex flex-col items-center justify-center gap-2 w-[90px] h-[90px] flex-shrink-0 border border-white/10 bg-white/[0.03] hover:border-[#c9a76f]/40 hover:bg-[#c9a76f]/5 transition-all duration-200 cursor-default"
               >
                 <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg"
-                  class="w-8 h-8"
-                  alt="Go"
-                />
-                <span
-                  class="jetbrains-mono text-[10px] text-gray-500 uppercase tracking-wider"
-                  >Go</span
-                >
-              </div>
-              <!-- Duplicate for seamless loop -->
-              <div
-                class="flex flex-col items-center justify-center gap-2 w-[90px] h-[90px] flex-shrink-0 border border-white/10 bg-white/[0.03] hover:border-[#c9a76f]/40 hover:bg-[#c9a76f]/5 transition-all duration-200 cursor-default"
-              >
-                <img
                   src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
                   class="w-8 h-8"
                   alt="HTML5"
@@ -619,6 +598,19 @@
                 <span
                   class="jetbrains-mono text-[10px] text-gray-500 uppercase tracking-wider"
                   >TypeScript</span
+                >
+              </div>
+              <div
+                class="flex flex-col items-center justify-center gap-2 w-[90px] h-[90px] flex-shrink-0 border border-white/10 bg-white/[0.03] hover:border-[#c9a76f]/40 hover:bg-[#c9a76f]/5 transition-all duration-200 cursor-default"
+              >
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg"
+                  class="w-8 h-8"
+                  alt="Go"
+                />
+                <span
+                  class="jetbrains-mono text-[10px] text-gray-500 uppercase tracking-wider"
+                  >Go</span
                 >
               </div>
               <div
@@ -729,7 +721,241 @@
           </div>
         </div>
       </section>
-      <section id="project"></section>
+      <section id="projects" class="min-h-screen py-24 px-6 md:px-16 relative">
+        <div class="relative z-10 max-w-5xl mx-auto">
+          <!-- Section label -->
+          <div class="flex items-center gap-3 mb-4">
+            <span class="w-10 h-px bg-[#c9a76f]"></span>
+            <span
+              class="jetbrains-mono text-xs text-gray-400 uppercase tracking-[0.2em]"
+              >Projects</span
+            >
+          </div>
+
+          <!-- Section heading -->
+          <h2
+            class="cormorant-garamond italic text-4xl md:text-5xl text-white mb-4"
+          >
+            Things I've <span class="not-italic text-[#c9a76f]">Built</span>
+          </h2>
+          <p class="jetbrains-mono text-sm text-gray-500 mb-16 max-w-lg">
+            A collection of projects I've worked on — from personal experiments
+            to real-world applications.
+          </p>
+
+          <!-- Projects Grid -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- Card 1 -->
+            <div
+              class="project-card border border-white/10 bg-white/[0.02] p-6 relative group cursor-default"
+            >
+              <span
+                class="card-number jetbrains-mono text-xs text-gray-600 absolute top-4 right-5 transition-colors duration-300"
+                >01</span
+              >
+
+              <span
+                class="absolute top-0 left-0 w-4 h-4 border-t border-l border-[#c9a76f]/40"
+              ></span>
+              <span
+                class="absolute bottom-0 right-0 w-4 h-4 border-b border-r border-[#c9a76f]/40"
+              ></span>
+
+              <h3 class="cormorant-garamond text-2xl text-white mb-3">
+                Portfolio Website
+              </h3>
+              <p
+                class="jetbrains-mono text-xs text-gray-400 leading-relaxed mb-6"
+              >
+                Personal portfolio website built from scratch showcasing my
+                skills, projects, and experience as a junior full-stack
+                developer.
+              </p>
+
+              <!-- Tech stack -->
+              <div class="flex flex-wrap gap-2 mb-6">
+                <span
+                  class="jetbrains-mono text-[10px] text-[#c9a76f] border border-[#c9a76f]/30 bg-[#c9a76f]/5 px-2 py-1"
+                  >HTML</span
+                >
+                <span
+                  class="jetbrains-mono text-[10px] text-[#c9a76f] border border-[#c9a76f]/30 bg-[#c9a76f]/5 px-2 py-1"
+                  >Bootstrap</span
+                >
+                <span
+                  class="jetbrains-mono text-[10px] text-[#c9a76f] border border-[#c9a76f]/30 bg-[#c9a76f]/5 px-2 py-1"
+                  >AOS.js</span
+                >
+              </div>
+
+              <!-- GitHub link -->
+              <a
+                href="https://github.com/InsoniacX/ArsyadR"
+                class="inline-flex items-center gap-2 jetbrains-mono text-xs text-gray-400 hover:text-[#c9a76f] transition-colors duration-200"
+              >
+                <i class="fi fi-brands-github text-lg"></i>
+                View on GitHub
+              </a>
+            </div>
+
+            <!-- Card 2 -->
+            <div
+              class="project-card border border-white/10 bg-white/[0.02] p-6 relative group cursor-default"
+            >
+              <span
+                class="card-number jetbrains-mono text-xs text-gray-600 absolute top-4 right-5 transition-colors duration-300"
+                >02</span
+              >
+              <span
+                class="absolute top-0 left-0 w-4 h-4 border-t border-l border-[#c9a76f]/40"
+              ></span>
+              <span
+                class="absolute bottom-0 right-0 w-4 h-4 border-b border-r border-[#c9a76f]/40"
+              ></span>
+
+              <h3 class="cormorant-garamond text-2xl text-white mb-3">
+                ATJastip Company Profile
+              </h3>
+              <p
+                class="jetbrains-mono text-xs text-gray-400 leading-relaxed mb-6"
+              >
+                Company Profile website built from scratch to introduce what
+                ATJastip is.
+              </p>
+
+              <div class="flex flex-wrap gap-2 mb-6">
+                <span
+                  class="jetbrains-mono text-[10px] text-[#c9a76f] border border-[#c9a76f]/30 bg-[#c9a76f]/5 px-2 py-1"
+                  >React</span
+                >
+                <span
+                  class="jetbrains-mono text-[10px] text-[#c9a76f] border border-[#c9a76f]/30 bg-[#c9a76f]/5 px-2 py-1"
+                  >Node.js</span
+                >
+                <span
+                  class="jetbrains-mono text-[10px] text-[#c9a76f] border border-[#c9a76f]/30 bg-[#c9a76f]/5 px-2 py-1"
+                  >Javascript</span
+                >
+                <span
+                  class="jetbrains-mono text-[10px] text-[#c9a76f] border border-[#c9a76f]/30 bg-[#c9a76f]/5 px-2 py-1"
+                  >Tailwind CSS</span
+                >
+              </div>
+
+              <a
+                href="https://github.com/InsoniacX/ATJastip"
+                class="inline-flex items-center gap-2 jetbrains-mono text-xs text-gray-400 hover:text-[#c9a76f] transition-colors duration-200"
+              >
+                <i class="fi fi-brands-github text-lg"></i>
+                View on GitHub
+              </a>
+            </div>
+
+            <!-- Card 3 -->
+            <div
+              class="project-card border border-white/10 bg-white/[0.02] p-6 relative group cursor-default"
+            >
+              <span
+                class="card-number jetbrains-mono text-xs text-gray-600 absolute top-4 right-5 transition-colors duration-300"
+                >03</span
+              >
+              <span
+                class="absolute top-0 left-0 w-4 h-4 border-t border-l border-[#c9a76f]/40"
+              ></span>
+              <span
+                class="absolute bottom-0 right-0 w-4 h-4 border-b border-r border-[#c9a76f]/40"
+              ></span>
+
+              <h3 class="cormorant-garamond text-2xl text-white mb-3">
+                Mikrotik Configuration Website
+              </h3>
+              <p
+                class="jetbrains-mono text-xs text-gray-400 leading-relaxed mb-6"
+              >
+                Personal Website to Configure Mikrotik Settings by Connecting it
+                using Mac Addresses or IP Addresses.
+              </p>
+
+              <div class="flex flex-wrap gap-2 mb-6">
+                <span
+                  class="jetbrains-mono text-[10px] text-[#c9a76f] border border-[#c9a76f]/30 bg-[#c9a76f]/5 px-2 py-1"
+                  >Laravel</span
+                >
+                <span
+                  class="jetbrains-mono text-[10px] text-[#c9a76f] border border-[#c9a76f]/30 bg-[#c9a76f]/5 px-2 py-1"
+                  >Livewire</span
+                >
+                <span
+                  class="jetbrains-mono text-[10px] text-[#c9a76f] border border-[#c9a76f]/30 bg-[#c9a76f]/5 px-2 py-1"
+                  >MySQL</span
+                >
+                <span
+                  class="jetbrains-mono text-[10px] text-[#c9a76f] border border-[#c9a76f]/30 bg-[#c9a76f]/5 px-2 py-1"
+                  >Tailwind CSS</span
+                >
+              </div>
+
+              <a
+                href="https://github.com/InsoniacX/mikrotik-configuration-web"
+                class="inline-flex items-center gap-2 jetbrains-mono text-xs text-gray-400 hover:text-[#c9a76f] transition-colors duration-200"
+              >
+                <i class="fi fi-brands-github text-lg"></i>
+                View on GitHub
+              </a>
+            </div>
+
+            <!-- Card 4 -->
+            <div
+              class="project-card border border-white/10 bg-white/[0.02] p-6 relative group cursor-default"
+            >
+              <span
+                class="card-number jetbrains-mono text-xs text-gray-600 absolute top-4 right-5 transition-colors duration-300"
+                >04</span
+              >
+              <span
+                class="absolute top-0 left-0 w-4 h-4 border-t border-l border-[#c9a76f]/40"
+              ></span>
+              <span
+                class="absolute bottom-0 right-0 w-4 h-4 border-b border-r border-[#c9a76f]/40"
+              ></span>
+
+              <h3 class="cormorant-garamond text-2xl text-white mb-3">
+                Motorcycle Catalog
+              </h3>
+              <p
+                class="jetbrains-mono text-xs text-gray-400 leading-relaxed mb-6"
+              >
+                A motorcycle catalog web app built with CodeIgniter, featuring
+                user authentication, product filtering, shopping cart, and an
+                admin panel to manage catalog data.
+              </p>
+
+              <div class="flex flex-wrap gap-2 mb-6">
+                <span
+                  class="jetbrains-mono text-[10px] text-[#c9a76f] border border-[#c9a76f]/30 bg-[#c9a76f]/5 px-2 py-1"
+                  >PHP</span
+                >
+                <span
+                  class="jetbrains-mono text-[10px] text-[#c9a76f] border border-[#c9a76f]/30 bg-[#c9a76f]/5 px-2 py-1"
+                  >Codeigniter</span
+                >
+                <span
+                  class="jetbrains-mono text-[10px] text-[#c9a76f] border border-[#c9a76f]/30 bg-[#c9a76f]/5 px-2 py-1"
+                  >MySQL</span
+                >
+              </div>
+
+              <a
+                href="#"
+                class="inline-flex items-center gap-2 jetbrains-mono text-xs text-gray-400 hover:text-[#c9a76f] transition-colors duration-200"
+              >
+                <i class="fi fi-brands-github text-lg"></i>
+                View on GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
       <section id="contact"></section>
     </main>
     <footer></footer>

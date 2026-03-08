@@ -16,6 +16,10 @@ moveToRandom();
 
 setInterval(moveToRandom, 3000);
 
+const track = document.getElementById('carouselTrack');
+const clone = track.innerHTML
+track.innerHTML += clone
+
 function toggleMenu() {
   const menu = document.getElementById('mobile-menu');
   const iconOpen  = document.getElementById('icon-open');
