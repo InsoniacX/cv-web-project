@@ -24,7 +24,7 @@
       <div class="w-full mx-auto px-6 relative">
         <div class="flex items-center justify-between h-16">
           <a
-            href="#"
+            href="/"
             class="text-white font-bold text-md uppercase tracking-wide"
             >InscX // Junior Full-Stack</a
           >
@@ -90,6 +90,7 @@
         >
       </div>
     </nav>
+
     <main class="bg-gray-800 w-full image-grid-template relative">
       <div class="glow-container">
         <div
@@ -97,62 +98,239 @@
           id="glowOrb"
         ></div>
       </div>
-      <section id="hero" class="h-screen overflow-hidden">
-        <div class="flex flex-col md:flex-row md:h-full relative z-10">
+
+      <!-- HERO SECTION -->
+      <section id="hero" class="h-screen overflow-hidden batik-bg relative">
+        <div
+          class="flex flex-col md:flex-row md:h-full relative z-10 px-6 md:px-16"
+        >
+          <!-- LEFT: Text content -->
           <div
-            class="flex flex-1 flex-col justify-center text-center items-center md:text-start md:pl-16"
+            class="flex flex-1 flex-col justify-center text-center items-center md:items-start md:text-start gap-5"
           >
-            <div class="text-white space-y-4">
-              <h2 class="text-5xl my-4 cormorant-garamond">
-                Arsyad <br /><span class="italic">Rianda Putra</span>
-              </h2>
-              <p class="jetbrains-mono uppercase my-4 text-gray-400">
-                Junior Full-Stack Developer
-              </p>
+            <!-- Available label -->
+            <div class="fade-in-up delay-1 flex items-center gap-3">
+              <span class="w-8 h-px bg-[#c9a76f]"></span>
+              <span
+                class="jetbrains-mono text-xs text-[#c9a76f] uppercase tracking-[0.3em]"
+                >Available for work</span
+              >
+              <span
+                class="w-2 h-2 rounded-full bg-[#c9a76f] animate-pulse"
+              ></span>
             </div>
-            <div class="flex text-white jetbrains-mono gap-6 mt-2">
+
+            <!-- Name -->
+            <div class="fade-in-up delay-2">
+              <h2
+                class="cormorant-garamond text-6xl lg:text-7xl text-white leading-tight"
+              >
+                Arsyad <br /><span class="italic shimmer-text"
+                  >Rianda Putra</span
+                >
+              </h2>
+            </div>
+
+            <!-- Typing role -->
+            <div class="fade-in-up delay-3 flex items-center gap-2">
+              <span
+                class="jetbrains-mono text-sm text-gray-400 uppercase tracking-widest"
+                id="typingText"
+              ></span>
+              <span class="cursor jetbrains-mono text-[#c9a76f]">|</span>
+            </div>
+
+            <!-- Short bio -->
+            <p
+              class="fade-in-up delay-3 jetbrains-mono text-xs text-gray-500 max-w-sm leading-relaxed"
+            >
+              Building clean, functional, and well-reasoned digital experiences
+              from first principles. Based in Bandung, Indonesia.
+            </p>
+
+            <!-- Stat cards -->
+            <div
+              class="fade-in-up delay-4 flex gap-4 flex-wrap justify-center md:justify-start"
+            >
+              <div
+                class="stat-card border border-white/10 bg-white/[0.03] px-4 py-3 text-center min-w-[80px]"
+              >
+                <p class="cormorant-garamond text-2xl text-[#c9a76f]">2+</p>
+                <p
+                  class="jetbrains-mono text-[10px] text-gray-500 uppercase tracking-wider"
+                >
+                  Years
+                </p>
+              </div>
+              <div
+                class="stat-card border border-white/10 bg-white/[0.03] px-4 py-3 text-center min-w-[80px]"
+              >
+                <p class="cormorant-garamond text-2xl text-[#c9a76f]">10+</p>
+                <p
+                  class="jetbrains-mono text-[10px] text-gray-500 uppercase tracking-wider"
+                >
+                  Projects
+                </p>
+              </div>
+              <div
+                class="stat-card border border-white/10 bg-white/[0.03] px-4 py-3 text-center min-w-[80px]"
+              >
+                <p class="cormorant-garamond text-2xl text-[#c9a76f]">15+</p>
+                <p
+                  class="jetbrains-mono text-[10px] text-gray-500 uppercase tracking-wider"
+                >
+                  Skills
+                </p>
+              </div>
+            </div>
+
+            <!-- Buttons -->
+            <div
+              class="fade-in-up delay-4 flex text-white jetbrains-mono gap-4 flex-wrap justify-center md:justify-start"
+            >
               <a
                 href="#projects"
-                class="px-4 py-2 bg-[#c9a76f] border-2 text-black border-black hover:bg-transparent hover:text-[#c9a76f] hover:border-[#c9a76f] transition-colors duration-200"
+                class="px-5 py-2.5 bg-[#c9a76f] text-black text-sm hover:bg-transparent hover:text-[#c9a76f] border-2 border-[#c9a76f] transition-all duration-200"
                 >My Works</a
               >
               <a
-                href=""
-                class="px-4 py-2 bg-transparent border-2 border-[#c9a76f] hover:bg-[#c9a76f] hover:text-black transition-colors duration-200"
+                href="#contact"
+                class="px-5 py-2.5 bg-transparent text-sm border-2 border-white/20 hover:border-[#c9a76f] hover:text-[#c9a76f] transition-all duration-200"
                 >Reach Me</a
               >
             </div>
+
+            <!-- Social links -->
+            <div class="fade-in-up delay-5 flex items-center gap-4 mt-2">
+              <span
+                class="jetbrains-mono text-[10px] text-gray-600 uppercase tracking-widest"
+                >Find me</span
+              >
+              <span class="w-6 h-px bg-white/20"></span>
+              <a
+                href="https://github.com/InsoniacX"
+                target="_blank"
+                class="text-gray-500 hover:text-[#c9a76f] transition-colors duration-200"
+              >
+                <i class="fi fi-brands-github text-lg"></i>
+              </a>
+              <a
+                href="#"
+                target="_blank"
+                class="text-gray-500 hover:text-[#c9a76f] transition-colors duration-200"
+              >
+                <i class="fi fi-brands-linkedin text-lg"></i>
+              </a>
+              <a
+                href="https://instagram.com/arsyadr_1"
+                target="_blank"
+                class="text-gray-500 hover:text-[#c9a76f] transition-colors duration-200"
+              >
+                <i class="fi fi-brands-instagram text-lg"></i>
+              </a>
+            </div>
           </div>
 
-          <div class="flex-1 flex items-center justify-center">
-            <div class="relative w-[360px] h-[440px] lg:w-[520px] lg:h-[600px]">
-              <span
-                class="absolute top-0 left-0 w-6 h-6 border-t-2 border-l-2 border-[#c9a76f] z-10"
-              ></span>
-              <span
-                class="absolute top-0 right-0 w-6 h-6 border-t-2 border-r-2 border-[#c9a76f] z-10"
-              ></span>
-              <span
-                class="absolute bottom-0 left-0 w-6 h-6 border-b-2 border-l-2 border-[#c9a76f] z-10"
-              ></span>
-              <span
-                class="absolute bottom-0 right-0 w-6 h-6 border-b-2 border-r-2 border-[#c9a76f] z-10"
-              ></span>
+          <!-- RIGHT: Image -->
+          <div class="flex-1 flex items-center justify-center relative">
+            <!-- Spinning decorative rings -->
+            <div
+              class="spin-slow absolute w-[320px] h-[320px] lg:w-[560px] lg:h-[560px] border border-[#c9a76f]/15 rounded-full"
+            ></div>
+            <div
+              class="spin-slow absolute w-[360px] h-[360px] lg:w-[620px] lg:h-[620px] border border-dashed border-[#c9a76f]/10 rounded-full"
+              style="animation-direction: reverse; animation-duration: 18s"
+            ></div>
 
-              <div class="w-full h-full overflow-hidden">
-                <img
-                  src="assets/Hitler_portrait_crop_(cropped)(2).jpg"
-                  alt="Profile"
-                  class="w-full h-full object-cover object-top z-10"
-                />
+            <!-- Profile image with batik border & corner accents -->
+            <div class="float-img relative z-10">
+              <div class="batik-image-border p-[10px]">
+                <div
+                  class="relative w-[240px] h-[340px] lg:w-[380px] lg:h-[500px]"
+                >
+                  <span
+                    class="absolute top-0 left-0 w-6 h-6 border-t-2 border-l-2 border-[#c9a76f] z-10"
+                  ></span>
+                  <span
+                    class="absolute top-0 right-0 w-6 h-6 border-t-2 border-r-2 border-[#c9a76f] z-10"
+                  ></span>
+                  <span
+                    class="absolute bottom-0 left-0 w-6 h-6 border-b-2 border-l-2 border-[#c9a76f] z-10"
+                  ></span>
+                  <span
+                    class="absolute bottom-0 right-0 w-6 h-6 border-b-2 border-r-2 border-[#c9a76f] z-10"
+                  ></span>
+                  <div class="w-full h-full overflow-hidden">
+                    <img
+                      src="assets/Hero.jpg"
+                      alt="Profile"
+                      class="w-full h-full object-cover object-top z-10"
+                    />
+                  </div>
+                </div>
               </div>
+            </div>
+
+            <!-- Floating tag: stack -->
+            <div
+              class="absolute bottom-[18%] left-[5%] lg:left-[8%] fade-in-up delay-5 border border-white/10 bg-black/60 backdrop-blur-sm px-3 py-2 z-20"
+            >
+              <p
+                class="jetbrains-mono text-[10px] text-gray-400 uppercase tracking-wider"
+              >
+                Stack
+              </p>
+              <p class="jetbrains-mono text-xs text-[#c9a76f]">
+                React · Node · Laravel
+              </p>
+            </div>
+
+            <!-- Floating tag: status -->
+            <div
+              class="absolute top-[20%] right-[4%] lg:right-[6%] fade-in-up delay-4 border border-[#c9a76f]/30 bg-black/60 backdrop-blur-sm px-3 py-2 z-20"
+            >
+              <p
+                class="jetbrains-mono text-[10px] text-gray-400 uppercase tracking-wider"
+              >
+                Status
+              </p>
+              <p
+                class="jetbrains-mono text-xs text-[#c9a76f] flex items-center gap-1"
+              >
+                <span
+                  class="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse inline-block"
+                ></span>
+                Open to work
+              </p>
             </div>
           </div>
         </div>
+
+        <!-- Scroll indicator -->
+        <div
+          class="absolute bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1 z-10"
+        >
+          <span
+            class="jetbrains-mono text-[10px] text-gray-600 uppercase tracking-widest"
+            >Scroll</span
+          >
+          <div
+            class="scroll-bounce w-px h-8 bg-gradient-to-b from-[#c9a76f] to-transparent"
+          ></div>
+        </div>
       </section>
-      <section id="about" class="min-h-screen py-24 px-6 md:px-16 relative">
+
+      <!-- BATIK DIVIDER -->
+      <div class="batik-divider-wrapper relative z-10">
+        <div class="batik-divider"></div>
+      </div>
+
+      <!-- ABOUT SECTION -->
+      <section
+        id="about"
+        class="min-h-screen py-24 px-6 md:px-16 relative batik-bg"
+      >
         <div class="relative z-10 max-w-5xl mx-auto">
-          <!-- Section label -->
           <div class="flex items-center gap-3 mb-12">
             <span class="w-10 h-px bg-[#c9a76f]"></span>
             <span
@@ -194,7 +372,6 @@
                 >
               </div>
 
-              <!-- Skill tags -->
               <div class="flex flex-wrap gap-3">
                 <span
                   class="jetbrains-mono text-xs text-[#c9a76f] border border-[#c9a76f]/30 bg-[#c9a76f]/5 px-3 py-1.5 hover:bg-[#c9a76f]/10 hover:border-[#c9a76f]/60 transition-colors duration-200 cursor-default"
@@ -326,7 +503,6 @@
           <!-- Carousel -->
           <div class="carousel-wrapper overflow-hidden">
             <div class="carousel-track flex gap-6" id="carouselTrack">
-              <!-- First set -->
               <div
                 class="flex flex-col items-center justify-center gap-2 w-[90px] h-[90px] flex-shrink-0 border border-white/10 bg-white/[0.03] hover:border-[#c9a76f]/40 hover:bg-[#c9a76f]/5 transition-all duration-200 cursor-default"
               >
@@ -334,8 +510,7 @@
                   src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
                   class="w-8 h-8"
                   alt="HTML5"
-                />
-                <span
+                /><span
                   class="jetbrains-mono text-[10px] text-gray-500 uppercase tracking-wider"
                   >HTML5</span
                 >
@@ -347,8 +522,7 @@
                   src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
                   class="w-8 h-8"
                   alt="CSS3"
-                />
-                <span
+                /><span
                   class="jetbrains-mono text-[10px] text-gray-500 uppercase tracking-wider"
                   >CSS3</span
                 >
@@ -360,8 +534,7 @@
                   src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
                   class="w-8 h-8"
                   alt="JavaScript"
-                />
-                <span
+                /><span
                   class="jetbrains-mono text-[10px] text-gray-500 uppercase tracking-wider"
                   >JavaScript</span
                 >
@@ -373,8 +546,7 @@
                   src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg"
                   class="w-8 h-8"
                   alt="PHP"
-                />
-                <span
+                /><span
                   class="jetbrains-mono text-[10px] text-gray-500 uppercase tracking-wider"
                   >PHP</span
                 >
@@ -386,8 +558,7 @@
                   src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
                   class="w-8 h-8"
                   alt="Typescript"
-                />
-                <span
+                /><span
                   class="jetbrains-mono text-[10px] text-gray-500 uppercase tracking-wider"
                   >TypeScript</span
                 >
@@ -399,8 +570,7 @@
                   src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg"
                   class="w-8 h-8"
                   alt="Go"
-                />
-                <span
+                /><span
                   class="jetbrains-mono text-[10px] text-gray-500 uppercase tracking-wider"
                   >Go</span
                 >
@@ -412,8 +582,7 @@
                   src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
                   class="w-8 h-8"
                   alt="React"
-                />
-                <span
+                /><span
                   class="jetbrains-mono text-[10px] text-gray-500 uppercase tracking-wider"
                   >React</span
                 >
@@ -425,8 +594,7 @@
                   src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
                   class="w-8 h-8"
                   alt="Node.js"
-                />
-                <span
+                /><span
                   class="jetbrains-mono text-[10px] text-gray-500 uppercase tracking-wider"
                   >Node.js</span
                 >
@@ -438,8 +606,7 @@
                   src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-original.svg"
                   class="w-8 h-8"
                   alt="Laravel"
-                />
-                <span
+                /><span
                   class="jetbrains-mono text-[10px] text-gray-500 uppercase tracking-wider"
                   >Laravel</span
                 >
@@ -451,8 +618,7 @@
                   src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vitejs/vitejs-original.svg"
                   class="w-8 h-8"
                   alt="ViteJs"
-                />
-                <span
+                /><span
                   class="jetbrains-mono text-[10px] text-gray-500 uppercase tracking-wider"
                   >ViteJS</span
                 >
@@ -464,8 +630,7 @@
                   src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg"
                   class="w-8 h-8"
                   alt="NextJs"
-                />
-                <span
+                /><span
                   class="jetbrains-mono text-[10px] text-gray-500 uppercase tracking-wider"
                   >Next.JS</span
                 >
@@ -477,8 +642,7 @@
                   src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg"
                   class="w-8 h-8 invert"
                   alt="Express"
-                />
-                <span
+                /><span
                   class="jetbrains-mono text-[10px] text-gray-500 uppercase tracking-wider"
                   >Express</span
                 >
@@ -490,8 +654,7 @@
                   src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
                   class="w-8 h-8"
                   alt="MySQL"
-                />
-                <span
+                /><span
                   class="jetbrains-mono text-[10px] text-gray-500 uppercase tracking-wider"
                   >MySQL</span
                 >
@@ -503,8 +666,7 @@
                   src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
                   class="w-8 h-8"
                   alt="Git"
-                />
-                <span
+                /><span
                   class="jetbrains-mono text-[10px] text-gray-500 uppercase tracking-wider"
                   >Git</span
                 >
@@ -516,8 +678,7 @@
                   src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
                   class="w-8 h-8 invert"
                   alt="GitHub"
-                />
-                <span
+                /><span
                   class="jetbrains-mono text-[10px] text-gray-500 uppercase tracking-wider"
                   >GitHub</span
                 >
@@ -529,8 +690,7 @@
                   src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg"
                   class="w-8 h-8"
                   alt="Tailwind"
-                />
-                <span
+                /><span
                   class="jetbrains-mono text-[10px] text-gray-500 uppercase tracking-wider"
                   >Tailwind</span
                 >
@@ -542,8 +702,7 @@
                   src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
                   class="w-8 h-8"
                   alt="HTML5"
-                />
-                <span
+                /><span
                   class="jetbrains-mono text-[10px] text-gray-500 uppercase tracking-wider"
                   >HTML5</span
                 >
@@ -555,8 +714,7 @@
                   src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
                   class="w-8 h-8"
                   alt="CSS3"
-                />
-                <span
+                /><span
                   class="jetbrains-mono text-[10px] text-gray-500 uppercase tracking-wider"
                   >CSS3</span
                 >
@@ -568,8 +726,7 @@
                   src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
                   class="w-8 h-8"
                   alt="JavaScript"
-                />
-                <span
+                /><span
                   class="jetbrains-mono text-[10px] text-gray-500 uppercase tracking-wider"
                   >JavaScript</span
                 >
@@ -581,8 +738,7 @@
                   src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg"
                   class="w-8 h-8"
                   alt="PHP"
-                />
-                <span
+                /><span
                   class="jetbrains-mono text-[10px] text-gray-500 uppercase tracking-wider"
                   >PHP</span
                 >
@@ -594,8 +750,7 @@
                   src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
                   class="w-8 h-8"
                   alt="TypeScript"
-                />
-                <span
+                /><span
                   class="jetbrains-mono text-[10px] text-gray-500 uppercase tracking-wider"
                   >TypeScript</span
                 >
@@ -607,8 +762,7 @@
                   src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg"
                   class="w-8 h-8"
                   alt="Go"
-                />
-                <span
+                /><span
                   class="jetbrains-mono text-[10px] text-gray-500 uppercase tracking-wider"
                   >Go</span
                 >
@@ -620,8 +774,7 @@
                   src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
                   class="w-8 h-8"
                   alt="React"
-                />
-                <span
+                /><span
                   class="jetbrains-mono text-[10px] text-gray-500 uppercase tracking-wider"
                   >React</span
                 >
@@ -633,8 +786,7 @@
                   src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
                   class="w-8 h-8"
                   alt="Node.js"
-                />
-                <span
+                /><span
                   class="jetbrains-mono text-[10px] text-gray-500 uppercase tracking-wider"
                   >Node.js</span
                 >
@@ -646,8 +798,7 @@
                   src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg"
                   class="w-8 h-8 invert"
                   alt="Express"
-                />
-                <span
+                /><span
                   class="jetbrains-mono text-[10px] text-gray-500 uppercase tracking-wider"
                   >Express</span
                 >
@@ -659,8 +810,7 @@
                   src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
                   class="w-8 h-8"
                   alt="MySQL"
-                />
-                <span
+                /><span
                   class="jetbrains-mono text-[10px] text-gray-500 uppercase tracking-wider"
                   >MySQL</span
                 >
@@ -672,8 +822,7 @@
                   src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
                   class="w-8 h-8"
                   alt="Git"
-                />
-                <span
+                /><span
                   class="jetbrains-mono text-[10px] text-gray-500 uppercase tracking-wider"
                   >Git</span
                 >
@@ -685,8 +834,7 @@
                   src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
                   class="w-8 h-8 invert"
                   alt="GitHub"
-                />
-                <span
+                /><span
                   class="jetbrains-mono text-[10px] text-gray-500 uppercase tracking-wider"
                   >GitHub</span
                 >
@@ -698,8 +846,7 @@
                   src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg"
                   class="w-8 h-8"
                   alt="Tailwind"
-                />
-                <span
+                /><span
                   class="jetbrains-mono text-[10px] text-gray-500 uppercase tracking-wider"
                   >Tailwind</span
                 >
@@ -711,8 +858,7 @@
                   src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg"
                   class="w-8 h-8"
                   alt="Go"
-                />
-                <span
+                /><span
                   class="jetbrains-mono text-[10px] text-gray-500 uppercase tracking-wider"
                   >Go</span
                 >
@@ -721,9 +867,15 @@
           </div>
         </div>
       </section>
+
+      <!-- BATIK DIVIDER -->
+      <div class="batik-divider-wrapper relative z-10">
+        <div class="batik-divider"></div>
+      </div>
+
+      <!-- PROJECTS SECTION -->
       <section id="projects" class="min-h-screen py-24 px-6 md:px-16 relative">
         <div class="relative z-10 max-w-5xl mx-auto">
-          <!-- Section label -->
           <div class="flex items-center gap-3 mb-4">
             <span class="w-10 h-px bg-[#c9a76f]"></span>
             <span
@@ -732,7 +884,6 @@
             >
           </div>
 
-          <!-- Section heading -->
           <h2
             class="cormorant-garamond italic text-4xl md:text-5xl text-white mb-4"
           >
@@ -743,7 +894,6 @@
             to real-world applications.
           </p>
 
-          <!-- Projects Grid -->
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <!-- Card 1 -->
             <div
@@ -753,26 +903,22 @@
                 class="card-number jetbrains-mono text-xs text-gray-600 absolute top-4 right-5 transition-colors duration-300"
                 >01</span
               >
-
               <span
                 class="absolute top-0 left-0 w-4 h-4 border-t border-l border-[#c9a76f]/40"
               ></span>
               <span
                 class="absolute bottom-0 right-0 w-4 h-4 border-b border-r border-[#c9a76f]/40"
               ></span>
-
               <h3 class="cormorant-garamond text-2xl text-white mb-3">
-                Portfolio Website
+                Portfolio Website | Final Project
               </h3>
               <p
                 class="jetbrains-mono text-xs text-gray-400 leading-relaxed mb-6"
               >
-                Personal portfolio website built from scratch showcasing my
-                skills, projects, and experience as a junior full-stack
-                developer.
+                Personal portfolio website built from scratch using HTML and
+                Bootstrap showcasing my skills, projects, and experience as a
+                junior full-stack developer.
               </p>
-
-              <!-- Tech stack -->
               <div class="flex flex-wrap gap-2 mb-6">
                 <span
                   class="jetbrains-mono text-[10px] text-[#c9a76f] border border-[#c9a76f]/30 bg-[#c9a76f]/5 px-2 py-1"
@@ -787,15 +933,11 @@
                   >AOS.js</span
                 >
               </div>
-
-              <!-- GitHub link -->
               <a
                 href="https://github.com/InsoniacX/ArsyadR"
                 class="inline-flex items-center gap-2 jetbrains-mono text-xs text-gray-400 hover:text-[#c9a76f] transition-colors duration-200"
+                ><i class="fi fi-brands-github text-lg"></i>View on GitHub</a
               >
-                <i class="fi fi-brands-github text-lg"></i>
-                View on GitHub
-              </a>
             </div>
 
             <!-- Card 2 -->
@@ -812,17 +954,17 @@
               <span
                 class="absolute bottom-0 right-0 w-4 h-4 border-b border-r border-[#c9a76f]/40"
               ></span>
-
               <h3 class="cormorant-garamond text-2xl text-white mb-3">
                 ATJastip Company Profile
               </h3>
               <p
                 class="jetbrains-mono text-xs text-gray-400 leading-relaxed mb-6"
               >
-                Company Profile website built from scratch to introduce what
-                ATJastip is.
+                A company profile website for ATJastip, a Japan-to-Indonesia
+                goods purchasing service founded by cosplayer Avetetsu, built
+                from scratch to introduce the brand and inform users about their
+                services.
               </p>
-
               <div class="flex flex-wrap gap-2 mb-6">
                 <span
                   class="jetbrains-mono text-[10px] text-[#c9a76f] border border-[#c9a76f]/30 bg-[#c9a76f]/5 px-2 py-1"
@@ -841,14 +983,11 @@
                   >Tailwind CSS</span
                 >
               </div>
-
               <a
                 href="https://github.com/InsoniacX/ATJastip"
                 class="inline-flex items-center gap-2 jetbrains-mono text-xs text-gray-400 hover:text-[#c9a76f] transition-colors duration-200"
+                ><i class="fi fi-brands-github text-lg"></i>View on GitHub</a
               >
-                <i class="fi fi-brands-github text-lg"></i>
-                View on GitHub
-              </a>
             </div>
 
             <!-- Card 3 -->
@@ -865,17 +1004,15 @@
               <span
                 class="absolute bottom-0 right-0 w-4 h-4 border-b border-r border-[#c9a76f]/40"
               ></span>
-
               <h3 class="cormorant-garamond text-2xl text-white mb-3">
                 Mikrotik Configuration Website
               </h3>
               <p
                 class="jetbrains-mono text-xs text-gray-400 leading-relaxed mb-6"
               >
-                Personal Website to Configure Mikrotik Settings by Connecting it
-                using Mac Addresses or IP Addresses.
+                Under development Webapp Project to Configure Mikrotik Devices
+                Settings by Connecting it using Mac Addresses or IP Addresses.
               </p>
-
               <div class="flex flex-wrap gap-2 mb-6">
                 <span
                   class="jetbrains-mono text-[10px] text-[#c9a76f] border border-[#c9a76f]/30 bg-[#c9a76f]/5 px-2 py-1"
@@ -894,14 +1031,11 @@
                   >Tailwind CSS</span
                 >
               </div>
-
               <a
                 href="https://github.com/InsoniacX/mikrotik-configuration-web"
                 class="inline-flex items-center gap-2 jetbrains-mono text-xs text-gray-400 hover:text-[#c9a76f] transition-colors duration-200"
+                ><i class="fi fi-brands-github text-lg"></i>View on GitHub</a
               >
-                <i class="fi fi-brands-github text-lg"></i>
-                View on GitHub
-              </a>
             </div>
 
             <!-- Card 4 -->
@@ -918,9 +1052,8 @@
               <span
                 class="absolute bottom-0 right-0 w-4 h-4 border-b border-r border-[#c9a76f]/40"
               ></span>
-
               <h3 class="cormorant-garamond text-2xl text-white mb-3">
-                Motorcycle Catalog
+                Motorcycle Catalog | Final Project
               </h3>
               <p
                 class="jetbrains-mono text-xs text-gray-400 leading-relaxed mb-6"
@@ -929,7 +1062,6 @@
                 user authentication, product filtering, shopping cart, and an
                 admin panel to manage catalog data.
               </p>
-
               <div class="flex flex-wrap gap-2 mb-6">
                 <span
                   class="jetbrains-mono text-[10px] text-[#c9a76f] border border-[#c9a76f]/30 bg-[#c9a76f]/5 px-2 py-1"
@@ -944,21 +1076,25 @@
                   >MySQL</span
                 >
               </div>
-
               <a
-                href="#"
+                href="https://github.com/InsoniacX/pw2024_tubes_233040075"
                 class="inline-flex items-center gap-2 jetbrains-mono text-xs text-gray-400 hover:text-[#c9a76f] transition-colors duration-200"
+                ><i class="fi fi-brands-github text-lg"></i>View on GitHub</a
               >
-                <i class="fi fi-brands-github text-lg"></i>
-                View on GitHub
-              </a>
             </div>
           </div>
         </div>
       </section>
+
+      <!-- BATIK DIVIDER -->
+      <div class="batik-divider-wrapper relative z-10">
+        <div class="batik-divider"></div>
+      </div>
+
       <section id="contact"></section>
     </main>
     <footer></footer>
     <script src="js/index.js"></script>
+    <script></script>
   </body>
 </html>

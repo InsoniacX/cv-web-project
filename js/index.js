@@ -29,3 +29,34 @@ function toggleMenu() {
   iconOpen.classList.toggle('hidden');
   iconClose.classList.toggle('hidden');
 }
+
+      // Typing animation
+      const roles = [
+        "Full-Stack Developer",
+        "Frontend Developer",
+        "Backend Developer",
+        "Data Analyst",
+      ];
+      let roleIndex = 0,
+        charIndex = 0,
+        deleting = false;
+      const el = document.getElementById("typingText");
+      function type() {
+        const current = roles[roleIndex];
+        if (!deleting) {
+          el.textContent = current.slice(0, ++charIndex);
+          if (charIndex === current.length) {
+            deleting = true;
+            setTimeout(type, 1800);
+            return;
+          }
+        } else {
+          el.textContent = current.slice(0, --charIndex);
+          if (charIndex === 0) {
+            deleting = false;
+            roleIndex = (roleIndex + 1) % roles.length;
+          }
+        }
+        setTimeout(type, deleting ? 50 : 80);
+      }
+      type();
